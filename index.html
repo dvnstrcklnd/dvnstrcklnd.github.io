@@ -142,6 +142,24 @@
             color: var(--color-text);
         }
 
+        .approach-blocks {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .approach-block h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .approach-block p {
+            font-size: 0.95rem;
+        }
+
         /* About */
         .subsection-heading {
             font-family: var(--font-display);
@@ -272,9 +290,20 @@
         <section id="approach">
             <div class="container">
                 <h2>Approach</h2>
-                <p>
-                    We identify the riskiest assumptions and most difficult challenges and tackle them first.
-                </p>
+                <div class="approach-blocks">
+                    <div class="approach-block">
+                        <h3>Tackle the Hard Problems First</h3>
+                        <p>Real innovation happens when you confront the riskiest assumptions and most difficult challenges directly. Building infrastructure feels like progress, but it doesn't address whether the fundamental approach will work. Often, the hardest problems aren't purely technical—they're about coordination, conflicting incentives, or misaligned workflows. Solve these first, then build systems to support proven solutions.</p>
+                    </div>
+                    <div class="approach-block">
+                        <h3>Align Technology with How Organizations Actually Work</h3>
+                        <p>Effective technology mirrors the organizational structure it serves. Rather than forcing teams to adapt to a monolithic system, build small, purpose-driven components that reflect how knowledge is organized and how people collaborate. Your software architecture is inseparable from your organizational reality. The goal is smooth integration between systems, not one application trying to do everything.</p>
+                    </div>
+                    <div class="approach-block">
+                        <h3>Augment Humans, Don't Replace Them</h3>
+                        <p>The most valuable technology amplifies human capabilities rather than substituting for them. The best tools—especially in science and R&D—enhance what researchers and practitioners can do. This means creating systems that augment expertise, enable new kinds of work, and keep humans in control of critical decisions. Focus on making people more capable, not on automation for its own sake.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
