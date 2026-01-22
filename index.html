@@ -49,6 +49,14 @@
             border-bottom: 1px solid var(--color-border);
         }
 
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
         .logo {
             display: flex;
             align-items: baseline;
@@ -58,11 +66,29 @@
             font-weight: 100;
             letter-spacing: 0.01em;
             color: var(--color-text);
+            text-decoration: none;
         }
 
         .logo img {
             height: clamp(26.5px, 1.765em, 75px);
             width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-text);
         }
 
         /* Hero */
@@ -133,31 +159,18 @@
             font-size: 0.95rem;
         }
 
-        /* Approach */
-        .approach-highlight {
-            border-left: 2px solid var(--color-border);
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
+        /* Philosophy */
+        .philosophy p {
+            margin-bottom: 1rem;
+        }
+
+        .philosophy p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .philosophy em {
             font-style: italic;
             color: var(--color-text);
-        }
-
-        .approach-list {
-            display: grid;
-            gap: 1.25rem;
-            margin-top: 1rem;
-        }
-
-        .approach-item h3 {
-            font-family: var(--font-display);
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--color-text);
-        }
-
-        .approach-item p {
-            font-size: 0.95rem;
         }
 
         /* About */
@@ -248,26 +261,37 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <img src="logo-dark.png" alt="Pendentive logo">
                 Pendentive
-            </div>
+            </a>
+            <nav>
+                <a href="writing.html">Writing</a>
+                <a href="reading.html">Reading</a>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Integrative system architecture for complex technology projects</h1>
+                <h1>Technology strategy for R&D that expands what scientists can do</h1>
                 <p class="hero-intro">
-                    In architecture, a pendentive is a smooth structural transition between a square space and a circular dome—a simple, elegant innovation that joins disparate elements into a unified whole.
+                    In architecture, a pendentive is the structural innovation that allows a circular dome to rest on a square base—a smooth transition between incompatible geometries. In R&D, the challenge is similar: laboratory methods, data systems, manufacturing processes, and AI models each have their own logic, and making them work together requires more than technical integration.
                 </p>
                 <p class="hero-statement">
-                    Today's R&D depends on bringing together laboratory methods, manufacturing processes, data systems, and AI models. Even when these parts work individually, integrating them creates friction, instability, and information loss.
+                    We help organizations invest in technology that genuinely expands human capability—not just automation that substitutes for it.
                 </p>
-                <p class="hero-statement">
-                    We provide strategic leadership to solve these problems.
-                </p>
+            </div>
+        </section>
+
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <h2>Philosophy</h2>
+                <p>Most technology investments in R&D are evaluated by what they automate: How many experiments can run unattended? How much human labor can we remove?</p>
+                <p>We ask a different question: <em>What can scientists do now that they couldn't do before?</em></p>
+                <p>The distinction matters. Technologies that merely substitute for human effort often create what economists call "so-so automation"—systems that displace workers without generating commensurate new value. The best investments create genuine usefulness: they extend reach into new experimental territory, surface patterns humans couldn't perceive, make distributed expertise accessible, amplify judgment under complexity, and help reasoning accumulate rather than dissipate.</p>
+                <p>We help clients distinguish between these possibilities and invest in the latter.</p>
             </div>
         </section>
 
@@ -276,32 +300,20 @@
                 <h2>Services</h2>
                 <div class="services-list">
                     <div class="service-item">
-                        <h3>Strategy</h3>
-                        <p>AI and data strategy, R&D roadmaps, and technology architecture aligned to the business and organization.</p>
+                        <h3>AI and Data Strategy</h3>
+                        <p>Identifying where AI and data infrastructure genuinely add value in R&D—and where they don't. We help organizations avoid hype, evaluate vendor claims critically, and build roadmaps aligned to scientific and business goals.</p>
                     </div>
                     <div class="service-item">
-                        <h3>Leadership</h3>
-                        <p>Fractional or engagement-based leadership for complex, multi-stakeholder initiatives.</p>
+                        <h3>Integration Architecture</h3>
+                        <p>Connecting laboratory systems, data platforms, manufacturing processes, and analytical tools in ways that reduce friction and preserve information. Using frameworks like Domain-Driven Design to align technical architecture with how science actually gets done.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="approach">
-            <div class="container">
-                <h2>Approach</h2>
-                <div class="approach-list">
-                    <div class="approach-item">
-                        <h3>Tackle the hard problems first</h3>
-                        <p>Real innovation happens when you confront the riskiest assumptions and most difficult challenges directly. Building infrastructure feels like progress, but it doesn't address whether the fundamental approach will work. Often, the hardest problems aren't purely technical—they're about coordination, conflicting incentives, or misaligned workflows. Solve these first, then build systems to support proven solutions.</p>
+                    <div class="service-item">
+                        <h3>Technical Due Diligence</h3>
+                        <p>Evaluating technology investments, vendor solutions, and internal proposals for scientific plausibility, implementation risk, and genuine usefulness. Particularly relevant for AI, automation, and data infrastructure in life sciences and adjacent fields.</p>
                     </div>
-                    <div class="approach-item">
-                        <h3>Align technology with how organizations actually work</h3>
-                        <p>Effective technology mirrors the organizational structure it serves. Rather than forcing teams to adapt to a monolithic system, build small, purpose-driven components that reflect how knowledge is organized and how people collaborate. Your software architecture is inseparable from your organizational reality. The goal is smooth integration between systems, not one application trying to do everything.</p>
-                    </div>
-                    <div class="approach-item">
-                        <h3>Augment humans, don't replace them</h3>
-                        <p>The most valuable technology amplifies human capabilities rather than substituting for them. The best tools—especially in science and R&D—enhance what researchers and practitioners can do. This means creating systems that augment expertise, enable new kinds of work, and keep humans in control of critical decisions. Focus on making people more capable, not on automation for its own sake.</p>
+                    <div class="service-item">
+                        <h3>Fractional Leadership</h3>
+                        <p>Interim and fractional executive roles for organizations navigating complex technology transitions. Engagement-based leadership for initiatives spanning science, technology, and operations.</p>
                     </div>
                 </div>
             </div>
@@ -311,15 +323,15 @@
             <div class="container">
                 <h2>About</h2>
                 <p>
-                    Pendentive Consulting is led by Devin Strickland, PhD, a scientist and technologist with two decades of experience at the intersection of laboratory research, software engineering, and technology strategy.
+                    Pendentive Consulting is led by Devin Strickland, a scientist and technologist with two decades of experience at the intersection of laboratory research, software engineering, and organizational strategy.
                 </p>
-                <h3 class="subsection-heading">Career Highlights</h3>
+                <h3 class="subsection-heading">Background</h3>
                 <ul class="credentials-list">
-                    <li>PhD, Biochemistry and Molecular Biology, University of Chicago</li>
-                    <li>Published researcher in protein engineering and cell biology</li>
-                    <li>Industrial biotech R&D scientist</li>
-                    <li>DARPA project lead</li>
-                    <li>Enterprise AI architect</li>
+                    <li>PhD in Biochemistry and Molecular Biology, University of Chicago</li>
+                    <li>Project lead for DARPA's Synergistic Discovery and Design (SD2) program at University of Washington, coordinating ~100 stakeholders across government, academia, and industry</li>
+                    <li>Enterprise AI architect for Fortune 100 clients in financial services and insurance</li>
+                    <li>Published researcher in protein engineering, optogenetics, and cell biology</li>
+                    <li>Former biotech R&D scientist and group lead</li>
                 </ul>
             </div>
         </section>
@@ -327,6 +339,7 @@
         <section class="cta">
             <div class="container">
                 <h2>Let's talk</h2>
+                <p>If you're evaluating a technology investment, navigating an integration challenge, or thinking about how AI fits into your R&D strategy, I'd welcome a conversation.</p>
                 <a href="https://calendly.com/devin-strickland/30min" class="cta-button">Schedule a Call</a>
             </div>
         </section>
