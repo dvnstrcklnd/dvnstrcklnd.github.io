@@ -70,15 +70,6 @@ body::before {
     z-index: -1;
 }
 
-.orb-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
-    top: -200px;
-    right: -200px;
-    animation: float 20s ease-in-out infinite;
-}
-
 .orb-2 {
     width: 400px;
     height: 400px;
@@ -104,7 +95,30 @@ body::before {
    Header & Navigation
    ============================================ */
 header {
-    padding: 3rem 0 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 0;
+    background: linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg) 95%, transparent 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
+    top: calc(1.5rem - 300px + 4px);
+    left: calc(50% - 550px + 2rem - 300px + 4px);
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+    animation: float 20s ease-in-out infinite;
 }
 
 header .container {
@@ -212,7 +226,7 @@ footer p {
    Home Page - Hero Section
    ============================================ */
 .hero {
-    padding: 2rem 0 4rem;
+    padding: 8rem 0 4rem;
 }
 
 .hero-content {
@@ -652,7 +666,7 @@ section p:last-of-type {
    Page Header (Writing, Reading)
    ============================================ */
 .page-header {
-    padding: 2rem 0 3rem;
+    padding: 8rem 0 3rem;
 }
 
 .page-header h1 {
@@ -781,7 +795,7 @@ section p:last-of-type {
    Article Page (Essays)
    ============================================ */
 .article-header {
-    padding: 2rem 0 1.5rem;
+    padding: 8rem 0 1.5rem;
 }
 
 .article-header .container {
@@ -1028,12 +1042,17 @@ section p:last-of-type {
         padding: 2rem 0 1rem;
     }
 
+    header::before {
+        left: -150px;
+        top: calc(2rem - 300px + 4px);
+    }
+
     section {
         padding: 3rem 0;
     }
 
     .hero {
-        padding: 1.5rem 0 3rem;
+        padding: 7rem 0 3rem;
     }
 
     .cta {
@@ -1041,7 +1060,7 @@ section p:last-of-type {
     }
 
     .page-header {
-        padding: 1.5rem 0 2rem;
+        padding: 7rem 0 2rem;
     }
 
     .articles {
@@ -1053,7 +1072,7 @@ section p:last-of-type {
     }
 
     .article-header {
-        padding: 1.5rem 0 1rem;
+        padding: 7rem 0 1rem;
     }
 
     .article-content {
